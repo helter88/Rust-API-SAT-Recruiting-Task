@@ -12,11 +12,11 @@ You will need Rust installed on your computer. To do so you should visit [Rust W
 2. Run Terminal and select your folder with downloaded app.
 3. Write `cargo run` in your terminal and wait for compilation process. 
 You should receive something like this: 
-<!-- <img src="./readme_files/run.JPG" alt="run"> -->
+<img src="./readme_files/run-api.JPG" alt="run">
 4. Now you can start making requests to API
 
 # Example of request to API
 
-1. To run simple request open second new terminal and write: `curl 127.0.0.1:8080`
+1. Lets test the first endpoint of API, to do so you should open new terminal window and write: `"127.0.0.1:8080/calculateDisselUsageForDistance?distance=200&year_of_production=2007&fuel_usage_per_100km=10"`
 You should receive something like this:
-<!-- <img src="./readme_files/terminal-response.JPG" alt="resonse"> -->
+<img src="./readme_files/response-first-endpoint.JPG" alt="first-endpoint-response">
