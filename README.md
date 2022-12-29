@@ -24,3 +24,9 @@ You should receive something like this:
 2. Lets test the second endpoint of API, to do so write in terminal: `curl "127.0.0.1:8080/probabilityOfUnitInjectorFail?vin=ABC123"`
 You should receive something like this:
 <img src="./readme_files/response-second-endpoint.JPG" alt="second-endpoint-response">
+
+# Built using
+
+- Rust
+- Actix Web
+- rand
