@@ -1,5 +1,6 @@
 use actix_web::{web, HttpResponse, get, App, HttpServer};
 use serde::Deserialize;
+use rand::Rng;
 
 #[derive(Deserialize)]
 struct QueryParams {
@@ -20,11 +21,25 @@ async fn calculate_dissel_usage(query: web::Query<QueryParams>) -> HttpResponse 
     HttpResponse::Ok().json(fuel_usage)
 }
 
+#[derive(Deserialize)]
+struct VIN {
+   vin: String
+}
+
+#[get("/probabilityOfUnitInjectorFail")]
+async fn probability_of_unit_injector_fail(query: web::Query<VIN>) -> HttpResponse {
+    let _vin = &query.vin;
+    let probability: f32 = rand::thread_rng().gen_range(0.0..1.0);
+
+    HttpResponse::Ok().json(probability)
+}
+
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
             .service(calculate_dissel_usage)
+            .service(probability_of_unit_injector_fail)
     })
     .bind(("127.0.0.1", 8080))?
     .run()
