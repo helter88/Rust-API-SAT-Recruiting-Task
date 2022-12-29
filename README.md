@@ -1,6 +1,6 @@
 # Introduction
 
-This project is simple implementation of API made in Rust with Actix Web. You can run the project on your local machine.
+This project is solution of SAT recruiting task  made in Rust You can read about it here: [SAT Recruiting Task PDF](https://github.com/helter88/Rust-API-SAT-Recruiting-Task/blob/main/readme_files/junior_fullstack_task.pdf)
 
 # Requirements to run app
 
