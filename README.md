@@ -17,7 +17,7 @@ You should receive something like this:
 
 # Example of request to API
 
-1. Lets test the first endpoint of API, to do so you should open new terminal window and write: `"127.0.0.1:8080/calculateDisselUsageForDistance?distance=200&year_of_production=2007&fuel_usage_per_100km=10"`
+1. Lets test the first endpoint of API, to do so you should open new terminal window and write: `curl "127.0.0.1:8080/calculateDisselUsageForDistance?distance=200&year_of_production=2007&fuel_usage_per_100km=10"`
 You should receive something like this:
 <img src="./readme_files/response-first-endpoint.JPG" alt="first-endpoint-response">
 

@@ -17,7 +17,6 @@ async fn calculate_dissel_usage(query: web::Query<QueryParams>) -> HttpResponse 
 
     let fuel_usage = (distance as f32 / 100.0) * fuel_usage_per_100km as f32;
 
-
     HttpResponse::Ok().json(fuel_usage)
 }
 
