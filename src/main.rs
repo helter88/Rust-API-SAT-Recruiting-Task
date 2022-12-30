@@ -5,7 +5,9 @@ use rand::Rng;
 #[derive(Deserialize)]
 struct QueryParams {
     distance: u32,
+    #[serde(rename = "yearOfProduction")]
     year_of_production: u32,
+    #[serde(rename = "fuelUsagePer100KM")]
     fuel_usage_per_100km: u32,
 }
 
@@ -22,6 +24,7 @@ async fn calculate_dissel_usage(query: web::Query<QueryParams>) -> HttpResponse 
 
 #[derive(Deserialize)]
 struct VIN {
+   #[serde(rename = "VIN")]
    vin: String
 }
 

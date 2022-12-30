@@ -17,11 +17,11 @@ You should receive something like this:
 
 # Example of request to API
 
-1. Lets test the first endpoint of API, to do so you should open new terminal window and write: `curl "127.0.0.1:8080/calculateDisselUsageForDistance?distance=200&year_of_production=2007&fuel_usage_per_100km=10"`
+1. Lets test the first endpoint of API, to do so you should open new terminal window and write: ` curl "127.0.0.1:8080/calculateDisselUsageForDistance?distance=200&yearOfProduction=2007&fuelUsagePer100KM=10"`
 You should receive something like this:
 <img src="./readme_files/response-first-endpoint.JPG" alt="first-endpoint-response">
 
-2. Lets test the second endpoint of API, to do so write in terminal: `curl "127.0.0.1:8080/probabilityOfUnitInjectorFail?vin=ABC123"`
+2. Lets test the second endpoint of API, to do so write in terminal: `curl "127.0.0.1:8080/probabilityOfUnitInjectorFail?VIN=ABC123"`
 You should receive something like this:
 <img src="./readme_files/response-second-endpoint.JPG" alt="second-endpoint-response">
 
