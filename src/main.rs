@@ -32,8 +32,9 @@ struct VIN {
 async fn probability_of_unit_injector_fail(query: web::Query<VIN>) -> HttpResponse {
     let _vin = &query.vin;
     let probability: f32 = rand::thread_rng().gen_range(0.0..1.0);
+    let formated_probability: f32 = format!("{:.2}", probability).parse().unwrap();
 
-    HttpResponse::Ok().json(probability)
+    HttpResponse::Ok().json(formated_probability)
 }
 
 #[actix_web::main]
